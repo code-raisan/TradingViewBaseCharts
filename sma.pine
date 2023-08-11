@@ -1,0 +1,14 @@
+// @version=5
+strategy(title="SMA", overlay=true, format=format.price)
+
+// SMA(単純移動平均)
+sma1 = ta.sma(close, 5)
+sma2 = ta.sma(close, 20)
+sma3 = ta.sma(close, 60)
+sma4 = ta.sma(close, 100)
+sma5 = ta.sma(close, 300)
+plot(sma1, color=color.new(color.orange, 0), linewidth=2, title="SMA 5日")
+plot(sma2, color=color.new(color.gray, 0), linewidth=2, title="SMA 20日")
+plot(sma3, color=color.new(color.blue, 0), linewidth=2, title="SMA 60日")
+plot(sma4, color=color.new(color.green, 0), linewidth=2, title="SMA 100日")
+plot(sma5, color=color.new(color.purple, 0), linewidth=2, title="SMA 300日")
